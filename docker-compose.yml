@@ -1,4 +1,5 @@
 
+
 services:
   # MySQL service
   mysql:
@@ -34,15 +35,49 @@ services:
     restart: always
 
   # PHP-FPM 7.4 service
-  php-fpm:
+  php-fpm-7.4:
     image: php:7.4-fpm
-    container_name: php-fpm
+    container_name: php-fpm-7.4
     volumes:
       - ./app:/var/www/html  
       - ./config/php.ini:/usr/local/etc/php/php.ini
     networks:
       - backend
     restart: always
+
+  # PHP-FPM 8.0 service
+  php-fpm-8.0:
+    image: php:8.0-fpm
+    container_name: php-fpm-8.0
+    volumes:
+      - ./app:/var/www/html
+      - ./config/php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - backend
+    restart: always
+
+  # PHP-FPM 8.1 service
+  php-fpm-8.1:
+    image: php:8.1-fpm
+    container_name: php-fpm-8.1
+    volumes:
+      - ./app:/var/www/html
+      - ./config/php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - backend
+    restart: always
+
+  # PHP-FPM 8.2 service
+  php-fpm-8.2:
+    image: php:8.2-fpm
+    container_name: php-fpm-8.2
+    volumes:
+      - ./app:/var/www/html
+      - ./config/php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - backend
+    restart: always
+
 
   # Nginx service
   nginx:
@@ -54,7 +89,10 @@ services:
     ports:
       - "80:80"  
     depends_on:
-      - php-fpm  
+      - php-fpm-7.4  
+      - php-fpm-8.0
+      - php-fpm-8.1
+      - php-fpm-8.2  
       - phpmyadmin
     networks:
       - backend
