@@ -9,8 +9,11 @@ services:
       MYSQL_DATABASE: mydb       
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./config/my.cnf:/etc/mysql/my.cnf
     networks:
       - backend
+    ports:
+    - "3306:3306"
     restart: always
 
   # phpMyAdmin service
