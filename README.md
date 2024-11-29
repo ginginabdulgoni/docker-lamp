@@ -12,9 +12,6 @@ Proyek Anda harus disimpan dalam struktur folder berikut:
 
 app/ └── yourproject/
 
-
-
-
 Letakkan file proyek PHP Anda di folder `app/yourproject` agar dapat diakses melalui container.
 
 ## Fitur
@@ -28,18 +25,14 @@ Letakkan file proyek PHP Anda di folder `app/yourproject` agar dapat diakses mel
 ## Cara Menggunakan
 
 1. **Clone Repository**
-   ```bash
+  
    git clone https://github.com/ginginabdulgoni/docker-lamp.git
    cd docker-lamp
-Simpan Proyek Anda
-
+   
 Pastikan file proyek Anda berada di folder app/yourproject.
 Jalankan Docker Compose
 
-bash
-
 docker-compose up -d
-Akses Proyek
 
 Akses proyek Anda melalui browser di: http://localhost.
 Jika proyek Anda disimpan di app/yourproject, maka URL-nya akan menjadi http://localhost/yourproject.
@@ -51,10 +44,15 @@ Catatan
 Anda dapat memodifikasi versi PHP, MySQL/MariaDB, atau layanan lainnya dengan mengedit file docker-compose.yml.
 Pastikan Docker dan Docker Compose sudah terinstal di sistem Anda sebelum menjalankan stack ini.
 
-
-
 ### Penyesuaian:
 1. Nama repo dihubungkan ke akun **ginginabdulgoni**.
 2. Keterangan URL `localhost:8080` untuk phpMyAdmin sudah dijelaskan.
 3. Struktur folder `app/yourproject` ditekankan di bagian awal. 
 
+## Dukungan
+Jika Anda merasa proyek ini bermanfaat dan ingin mendukung saya, traktir kopi saya melalui:  
+- [Saweria](https://saweria.co/ginginabdulgoni)  
+- [Trakteer](https://trakteer.id/ginginabdulgoni)  
+- [Trakteer Tips](https://trakteer.id/ginginabdulgoni/tip)  
+
+Terima kasih atas dukungannya! 😊
