@@ -39,7 +39,7 @@ Jika proyek Anda disimpan di app/yourproject, maka URL-nya akan menjadi http://l
 Akses phpMyAdmin
 
 URL: http://localhost:8080
-Masukkan username dan password MySQL/MariaDB sesuai konfigurasi di docker-compose.yml.
+Masukkan username dan password MySQL/MariaDB sesuai konfigurasi di docker-compose.yml. example root:root
 Catatan
 Anda dapat memodifikasi versi PHP, MySQL/MariaDB, atau layanan lainnya dengan mengedit file docker-compose.yml.
 Pastikan Docker dan Docker Compose sudah terinstal di sistem Anda sebelum menjalankan stack ini.
@@ -53,6 +53,5 @@ Pastikan Docker dan Docker Compose sudah terinstal di sistem Anda sebelum menjal
 Jika Anda merasa proyek ini bermanfaat dan ingin mendukung saya, traktir kopi saya melalui:  
 - [Saweria](https://saweria.co/ginginabdulgoni)  
 - [Trakteer](https://trakteer.id/ginginabdulgoni)  
-- [Trakteer Tips](https://trakteer.id/ginginabdulgoni/tip)  
-
-Terima kasih atas dukungannya! 😊
+- [Trakteer Tips](https://trakteer.id/ginginabdulgoni/tip)
+- [Paypal](https://paypal.me/ginginabdulgoni)
