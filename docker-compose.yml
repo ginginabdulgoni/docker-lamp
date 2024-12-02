@@ -23,13 +23,15 @@ services:
     container_name: phpmyadmin
     environment:
       PMA_HOST: mysql  
-      PMA_PORT: 3306   
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 100M   
     ports:
       - "8080:80"  
     depends_on:
       - mysql
     volumes:
       - ./config/php.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./config/php.ini:/usr/local/etc/php/php.ini
     networks:
       - backend
     restart: always
@@ -44,6 +46,7 @@ services:
     networks:
       - backend
     restart: always
+    
 
   # PHP-FPM 8.0 service
   php-fpm-8.0:
@@ -54,7 +57,7 @@ services:
       - ./config/php.ini:/usr/local/etc/php/php.ini
     networks:
       - backend
-    restart: always
+    restart: no
 
   # PHP-FPM 8.1 service
   php-fpm-8.1:
@@ -65,7 +68,7 @@ services:
       - ./config/php.ini:/usr/local/etc/php/php.ini
     networks:
       - backend
-    restart: always
+    restart: no
 
   # PHP-FPM 8.2 service
   php-fpm-8.2:
@@ -76,7 +79,7 @@ services:
       - ./config/php.ini:/usr/local/etc/php/php.ini
     networks:
       - backend
-    restart: always
+    restart: no
 
 
   # Nginx service
